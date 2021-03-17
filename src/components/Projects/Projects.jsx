@@ -49,14 +49,17 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
+                      {url && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={url || '#!'}
+                        >
+                          See Live
+                        </a>
+                      )}
+
 
                       {repo && (
                         <a
@@ -110,6 +113,14 @@ const Projects = () => {
               </Row>
             );
           })}
+          <div>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn cta-btn--hero"
+              href= 'https://github.com/petepeg/'
+            >See more projects on my GitHub</a>
+          </div>
         </div>
       </Container>
     </section>
